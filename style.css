@@ -71,6 +71,7 @@ h1 {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   padding: 1.7rem 0;
+  text-align: left;
 }
 
 .about p {
