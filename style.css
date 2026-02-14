@@ -51,6 +51,21 @@ h1 {
   letter-spacing: 0.02em;
 }
 
+.contact {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.7rem 1rem;
+  font-size: 0.95rem;
+}
+
+.contact-label {
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
 .about {
   margin: 2.2rem auto 0;
   border-top: 1px solid var(--line);
@@ -68,23 +83,56 @@ h1 {
   font-size: 0.95rem;
 }
 
-.contact {
-  margin-top: 1.9rem;
+.contact a {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  font-size: 0.98rem;
-}
-
-.contact a {
+  gap: 0.35rem;
   color: var(--link);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.22rem 0.62rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.contact .icon {
+  font-size: 0.82rem;
+  color: var(--muted);
 }
 
 .contact a:hover,
 .contact a:focus-visible {
-  border-bottom-color: var(--link);
+  border-color: var(--link);
+  background-color: rgba(207, 215, 232, 0.06);
+}
+
+.contact a:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+.coursework {
+  margin: 2rem auto 0;
+  text-align: left;
+}
+
+.coursework h2 {
+  margin: 0 0 0.85rem;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Times New Roman",
+    serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.coursework ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.coursework li {
+  margin: 0.55rem 0;
+  color: var(--text);
 }
 
 footer {
@@ -103,5 +151,9 @@ footer {
   .about {
     margin-top: 1.7rem;
     padding: 1.3rem 0;
+  }
+
+  .coursework {
+    margin-top: 1.7rem;
   }
 }
