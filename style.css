@@ -6,12 +6,12 @@
 }
 
 :root {
-  /* Calm dark palette */
-  --bg: #0f1115;
-  --text: #e8eaf0;
-  --muted: #a8adb9;
-  --line: #2a2f3a;
-  --link: #cfd7e8;
+  /* Deep phthalo-green academic palette */
+  --bg: #040c08;
+  --text: #e6efe9;
+  --muted: #9fb3a8;
+  --line: #1e3a30;
+  --link: #c7ddd2;
 }
 
 html,
@@ -104,7 +104,7 @@ h1 {
 .contact a:hover,
 .contact a:focus-visible {
   border-color: var(--link);
-  background-color: rgba(207, 215, 232, 0.06);
+  background-color: rgba(199, 221, 210, 0.08);
 }
 
 .contact a:focus-visible {
