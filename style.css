@@ -74,8 +74,21 @@ h1 {
   text-align: left;
 }
 
+.about h2 {
+  margin: 0 0 0.85rem;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Times New Roman",
+    serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
 .about p {
   margin: 0;
+}
+
+.about p + p {
+  margin-top: 1rem;
 }
 
 .status {
@@ -97,8 +110,16 @@ h1 {
 }
 
 .contact .icon {
+  display: inline-flex;
+  align-items: center;
   font-size: 0.82rem;
   color: var(--muted);
+}
+
+.contact .icon svg {
+  width: 0.85rem;
+  height: 0.85rem;
+  display: block;
 }
 
 .contact a:hover,
