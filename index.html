@@ -18,7 +18,7 @@
         <p class="subtitle">Physics Undergraduate | Computational Physics</p>
 
         <!-- Contact row placed near the top for immediate visibility -->
-        <nav class="contact" aria-label="Contact links">
+        <nav id="contact" class="contact" aria-label="Contact links">
           <span class="contact-label">Contact</span>
           <a href="mailto:yourname@university.edu">
             <span class="icon" aria-hidden="true">✉</span>
@@ -48,10 +48,19 @@
             <span>GitHub</span>
           </a>
         </nav>
+
+        <!-- TOP SECTION NAV START -->
+        <nav class="section-nav" aria-label="Section navigation">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#coursework">Coursework</a>
+          <a href="#cv">CV</a>
+        </nav>
+        <!-- TOP SECTION NAV END -->
       </header>
 
       <!-- ACADEMIC BIO START -->
-      <section class="about" aria-label="Academic Bio">
+      <section id="about" class="about" aria-label="Academic Bio">
         
         <p>
           I am an undergraduate physics student at Stony Brook University with a developing focus in computational physics, scientific modeling, and quantitative methods in modern physics. 
@@ -61,9 +70,23 @@
       </section>
       <!-- ACADEMIC BIO END -->
 
+      <!-- PROJECTS SECTION START -->
+      <section id="projects" class="coursework projects" aria-label="Featured Projects">
+        <h2>Featured Projects</h2>
+        <p id="projects-loading" class="projects-loading">Loading projects...</p>
+        <p id="projects-error" class="projects-error" hidden>
+          Unable to load projects right now. Visit
+          <a href="https://github.com/nilanand" target="_blank" rel="noreferrer">my GitHub profile</a>.
+        </p>
+        <div id="projects-grid" class="projects-grid" aria-live="polite"></div>
+      </section>
+      <!-- PROJECTS SECTION END -->
+
+
+
       <!-- SELECTED COURSEWORK SECTION START -->
-      <section class="coursework" aria-label="Selected Coursework">
-        <h2>Selected Coursework</h2>
+      <section id="coursework" class="coursework" aria-label="Relevant Coursework">
+        <h2>Relevant Coursework</h2>
         <h3>Current Coursework</h3>
         <ul>
           <li>MAT 342: Applied Complex Analysis</li>
@@ -80,10 +103,27 @@
         </ul>
       </section>
       <!-- SELECTED COURSEWORK SECTION END -->
+
+      <!-- CV SECTION START -->
+      <section id="cv" class="coursework cv-section" aria-label="Curriculum Vitae">
+        <h2>Curriculum Vitae</h2>
+        <p>A copy of my current academic CV is available below.</p>
+        <a
+          class="cv-link"
+          href="cv/Nilabh_Anand_CV.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          Download CV (PDF)
+        </a>
+      </section>
+      <!-- CV SECTION END -->
     </main>
 
     <footer>
       <p>&copy; 2026 Nilabh Anand | nilanand.com</p>
     </footer>
+
+    <script src="assets/js/projects.js" defer></script>
   </body>
 </html>

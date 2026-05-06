@@ -14,6 +14,10 @@
   --link: #c7ddd2;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   margin: 0;
@@ -64,6 +68,34 @@ h1 {
 .contact-label {
   color: var(--muted);
   letter-spacing: 0.02em;
+}
+
+.section-nav {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.85rem;
+  font-size: 0.9rem;
+}
+
+.section-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.section-nav a:hover,
+.section-nav a:focus-visible {
+  color: var(--link);
+  border-bottom-color: currentColor;
+}
+
+.section-nav a:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
 }
 
 .about {
@@ -177,5 +209,101 @@ footer {
 
   .coursework {
     margin-top: 1.7rem;
+  }
+}
+
+.projects-note {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.projects-loading,
+.projects-error {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.projects-error a {
+  color: var(--link);
+}
+
+.projects-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.85rem;
+}
+
+.project-card {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.85rem 0.9rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.project-card:hover,
+.project-card:focus-visible {
+  border-color: var(--link);
+  background-color: rgba(199, 221, 210, 0.06);
+}
+
+.project-card:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+.project-title {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+  font-size: 1.02rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.project-meta {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.project-desc {
+  margin: 0.55rem 0 0;
+  color: var(--text);
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+.cv-section p {
+  margin: 0 0 0.85rem;
+}
+
+.cv-link {
+  display: inline-block;
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.cv-link:hover,
+.cv-link:focus-visible {
+  color: var(--text);
+  border-bottom-color: currentColor;
+}
+
+.cv-link:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }
