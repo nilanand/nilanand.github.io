@@ -34,7 +34,55 @@ body {
   padding: 2rem 1.5rem;
 }
 
+.gw-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.gw-wave {
+  position: absolute;
+  width: min(95vw, 72rem);
+  aspect-ratio: 2.4 / 1;
+  border: 1px solid rgba(159, 179, 168, 0.11);
+  border-radius: 50%;
+  opacity: 0.55;
+  animation: gw-drift 42s ease-in-out infinite alternate;
+}
+
+.gw-wave-one {
+  top: 8%;
+  left: -38%;
+}
+
+.gw-wave-two {
+  top: 42%;
+  right: -42%;
+  animation-delay: -14s;
+}
+
+.gw-wave-three {
+  bottom: -5%;
+  left: -24%;
+  width: min(110vw, 84rem);
+  animation-delay: -28s;
+}
+
+@keyframes gw-drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(1.5%, -1%, 0) scale(1.025);
+  }
+}
+
 .page {
+  position: relative;
+  z-index: 1;
   width: min(680px, 100%);
   text-align: center;
 }
@@ -190,10 +238,18 @@ h1 {
 }
 
 footer {
+  position: relative;
+  z-index: 1;
   margin-top: 2rem;
   color: var(--muted);
   font-size: 0.82rem;
   text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gw-wave {
+    animation: none;
+  }
 }
 
 /* Slightly tighter spacing on small screens */
