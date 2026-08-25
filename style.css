@@ -44,39 +44,43 @@ body {
 
 .gw-wave {
   position: absolute;
-  width: min(95vw, 72rem);
-  aspect-ratio: 2.4 / 1;
-  border: 1px solid rgba(159, 179, 168, 0.11);
+  width: 165vw;
+  height: clamp(10rem, 28vw, 22rem);
+  border: 1px solid rgba(159, 179, 168, 0.18);
+  border-left-color: transparent;
+  border-right-color: transparent;
   border-radius: 50%;
-  opacity: 0.55;
-  animation: gw-drift 42s ease-in-out infinite alternate;
+  opacity: 0.7;
+  animation: gw-drift 58s ease-in-out infinite alternate;
 }
 
 .gw-wave-one {
-  top: 8%;
+  top: 5%;
   left: -38%;
+  --gw-rotation: -7deg;
 }
 
 .gw-wave-two {
-  top: 42%;
-  right: -42%;
-  animation-delay: -14s;
+  top: 39%;
+  right: -44%;
+  --gw-rotation: 6deg;
+  animation-delay: -19s;
 }
 
 .gw-wave-three {
-  bottom: -5%;
-  left: -24%;
-  width: min(110vw, 84rem);
-  animation-delay: -28s;
+  bottom: 0;
+  left: -34%;
+  --gw-rotation: -4deg;
+  animation-delay: -38s;
 }
 
 @keyframes gw-drift {
   from {
-    transform: translate3d(0, 0, 0) scale(1);
+    transform: rotate(var(--gw-rotation)) translate3d(0, 0, 0) scale(1);
   }
 
   to {
-    transform: translate3d(1.5%, -1%, 0) scale(1.025);
+    transform: rotate(var(--gw-rotation)) translate3d(1.5%, -1%, 0) scale(1.025);
   }
 }
 
