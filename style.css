@@ -40,12 +40,30 @@ body {
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    #000 0%,
+    rgba(0, 0, 0, 0.75) 10%,
+    transparent 20%,
+    transparent 80%,
+    rgba(0, 0, 0, 0.75) 90%,
+    #000 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    #000 0%,
+    rgba(0, 0, 0, 0.75) 10%,
+    transparent 20%,
+    transparent 80%,
+    rgba(0, 0, 0, 0.75) 90%,
+    #000 100%
+  );
 }
 
 .gw-wave {
   position: absolute;
-  width: 165vw;
-  height: clamp(10rem, 28vw, 22rem);
+  width: 180vw;
+  height: clamp(8rem, 20vw, 16rem);
   border: 1px solid rgba(159, 179, 168, 0.18);
   border-left-color: transparent;
   border-right-color: transparent;
@@ -55,21 +73,21 @@ body {
 }
 
 .gw-wave-one {
-  top: 5%;
-  left: -38%;
-  --gw-rotation: -7deg;
+  top: -10%;
+  left: -42%;
+  --gw-rotation: -4deg;
 }
 
 .gw-wave-two {
-  top: 39%;
-  right: -44%;
-  --gw-rotation: 6deg;
+  top: 34%;
+  left: -42%;
+  --gw-rotation: -4deg;
   animation-delay: -19s;
 }
 
 .gw-wave-three {
-  bottom: 0;
-  left: -34%;
+  top: 78%;
+  left: -42%;
   --gw-rotation: -4deg;
   animation-delay: -38s;
 }
